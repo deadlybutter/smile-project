@@ -31,6 +31,11 @@ h1 {
     margin: auto;
     background-color: inherit;
   }
+
+  .container__half {
+    width: 49%;
+    display: inline-block;
+  }
 }
 
 .introduction {
@@ -41,4 +46,15 @@ h1 {
     color: $isabelline;
     background-color: inherit;
   }
+
+  .container__half {
+    background-color: $sunglow;
+  }
+
+  // &.-right {
+  //   .wrapper {
+  //     background-size: cover;
+  //     background-image: url('../img/header_desktop.jpeg');
+  //   }
+  // }
 }
