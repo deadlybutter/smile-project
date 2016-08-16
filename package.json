@@ -14,7 +14,8 @@
   "scripts": {
     "test": "mocha",
     "buildcss": "./bin/build_css",
-    "watchcss": "./bin/watch_css"
+    "watchcss": "./bin/watch_css",
+    "postinstall": "npm run buildcss"
   },
   "repository": {
     "type": "git",
