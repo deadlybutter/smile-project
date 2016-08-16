@@ -1,0 +1,29 @@
+{
+  "name": "smile-project",
+  "version": "1.0.0",
+  "description": "Liz B's new blog",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "superagent": "^2.2.0"
+  },
+  "devDependencies": {
+    "node-sass": "^3.8.0",
+    "nodemon": "^1.10.0"
+  },
+  "scripts": {
+    "test": "mocha",
+    "buildcss": "./bin/build_css",
+    "watchcss": "./bin/watch_css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deadlybutter/smile-project.git"
+  },
+  "author": "Joe Kent",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deadlybutter/smile-project/issues"
+  },
+  "homepage": "https://github.com/deadlybutter/smile-project#readme"
+}
