@@ -1,4 +1,44 @@
+$isabelline: #F5F1ED;
+$stormcloud: #4B6866;
+$sunglow: #FFCE3D;
+$middleblue: #90CED7;
+
 * {
   margin: 0;
   padding: 0;
+  background-color: $isabelline;
+}
+
+h1 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 48px;
+}
+
+*:not(h1) {
+  font-family: 'Maitree', serif;
+}
+
+.container {
+  display: block;
+  width: 100vw;
+
+  &.-fullscreen {
+    height: 100vh;
+  }
+
+  > .wrapper {
+    max-width: 1440px;
+    margin: auto;
+    background-color: inherit;
+  }
+}
+
+.introduction {
+  background-color: $sunglow;
+
+  h1 {
+    font-size: 10vw;
+    color: $isabelline;
+    background-color: inherit;
+  }
 }
