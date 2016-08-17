@@ -74,10 +74,12 @@ h1 {
    .blog__item {
      display: inline-block;
      width: 100%;
-     min-height: 128px;
+     min-height: 256px;
+     background-size: cover;
+     background-position: 50%;
 
      &:first-of-type {
-       min-height: 256px;
+       min-height: 360px;
      }
    }
 }

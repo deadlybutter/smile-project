@@ -18,7 +18,7 @@ function fetchOnboardData() {
   console.info('Fetching feed...');
   feed(process.env.FEED_URL || '', function(err, articles) {
     if (err) {
-      console.err('Fetch error: ', err);
+      console.error('Fetch error: ', err);
       return;
     }
 

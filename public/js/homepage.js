@@ -1,10 +1,21 @@
 const BlogPost = React.createClass({
   render: function() {
     const blogData = this.props.data;
-    const $blogData = $.parseHtml(blogData.content);
-    
+    const $blogData = $($.parseHTML(blogData.content));
+    const feedImage = $($blogData.children('p.medium-feed-image')[0]).find('img');
+
+    if (feedImage.length == 0) {
+      return null;
+    }
+
+    console.log(feedImage);
+
+    const styles = {
+      backgroundImage: `url('${feedImage[0].src}')`
+    };
+
     return (
-      <div className="blog__item">
+      <div className="blog__item" style={styles}>
         <p>post</p>
       </div>
     );
@@ -28,7 +39,6 @@ const BlogContainer = React.createClass({
 
   render: function() {
     const items = this.state.items;
-    console.log(items);
     if (!items) {
       return;
     }
