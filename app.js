@@ -31,7 +31,7 @@ app.listen(process.env.PORT, function () {
   console.info(`App listening on port ${process.env.PORT}.`);
   fetchOnboardData();
 
-  new CronJob('*/30 * * * * *', function() {
-    fetchOnboardData();
-  }, null, true, 'America/Los_Angeles');
+  // new CronJob('*/30 * * * * *', function() {
+  //   fetchOnboardData();
+  // }, null, true, 'America/Los_Angeles');
 });

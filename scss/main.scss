@@ -1,6 +1,7 @@
 $isabelline: #F5F1ED;
 $stormcloud: #4B6866;
 $sunglow: #FFCE3D;
+$darkerSunglow: #f2b522;
 $middleblue: #90CED7;
 
 $spacing: 16px;
@@ -23,6 +24,15 @@ h1 {
   font-size: $textSizeDefault;
 }
 
+a {
+  text-decoration: none;
+  color: $sunglow;
+
+  &:hover {
+    color: $darkerSunglow;
+  }
+}
+
 .container {
   display: block;
   width: 100vw;
@@ -38,7 +48,7 @@ h1 {
 
 .introduction {
   background-color: $sunglow;
-  background: linear-gradient(135deg, $sunglow, #f2b522);
+  background: linear-gradient(135deg, $sunglow, $darkerSunglow);
   position: relative;
 
   .introduction__header {
@@ -72,7 +82,18 @@ h1 {
   }
 
   .gallery {
-    
+    padding: $spacing;
+
+    img {
+      display: inline;
+      width: 24%;
+    }
+
+    img:after {
+      content: "";
+      display: block;
+      padding-bottom: 50%;
+    }
   }
 }
 
