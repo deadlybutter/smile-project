@@ -18,7 +18,7 @@ const BlogPost = React.createClass({
       <a href={blogData.link}>
         <div className="blog__item" style={styles}>
           <div className="wrapper">
-            <h1>{blogData.title}</h1>
+            <p>{blogData.title}</p>
           </div>
         </div>
       </a>

@@ -4,6 +4,9 @@ $sunglow: #FFCE3D;
 $middleblue: #90CED7;
 
 $spacing: 16px;
+$textSizeDefault: 24px;
+$textSizeLarge: 48px;
+$textSizeSuperLarge: 128px;
 
 * {
   margin: 0;
@@ -12,11 +15,12 @@ $spacing: 16px;
 
 h1 {
   font-family: 'Covered By Your Grace', cursive;
-  font-size: 48px;
+  font-size: $textSizeLarge;
 }
 
 *:not(h1) {
   font-family: 'Open Sans Condensed', sans-serif;
+  font-size: $textSizeDefault;
 }
 
 .container {
@@ -60,6 +64,18 @@ h1 {
   }
 }
 
+.social {
+  > .wrapper {
+    color: $stormcloud;
+    text-align: center;
+    padding: $spacing;
+  }
+
+  .gallery {
+    
+  }
+}
+
 .blog {
    background-color: $middleblue;
 
@@ -68,11 +84,7 @@ h1 {
      margin-bottom: $spacing * 3;
 
      h1 {
-       font-size: 128px;
-     }
-
-     p {
-       font-size: 32px;
+       font-size: $textSizeSuperLarge;
      }
    }
 
@@ -85,10 +97,6 @@ h1 {
      color: $isabelline;
      position: relative;
 
-     &:first-child {
-       min-height: 360px;
-     }
-
      .wrapper {
        position: absolute;
        bottom: 0;
@@ -96,9 +104,10 @@ h1 {
        width: 100%;
      }
 
-     h1 {
-       padding: $spacing;
+     p {
+       margin: $spacing;
        text-shadow: 3px 3px 7px rgba(0, 0, 0, 1);
+       font-size: $textSizeLarge;
      }
    }
 }
