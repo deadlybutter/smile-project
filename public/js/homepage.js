@@ -8,16 +8,20 @@ const BlogPost = React.createClass({
       return null;
     }
 
-    console.log(feedImage);
+    console.log(blogData, feedImage);
 
     const styles = {
       backgroundImage: `url('${feedImage[0].src}')`
     };
 
     return (
-      <div className="blog__item" style={styles}>
-        <p>post</p>
-      </div>
+      <a href={blogData.link}>
+        <div className="blog__item" style={styles}>
+          <div className="wrapper">
+            <h1>{blogData.title}</h1>
+          </div>
+        </div>
+      </a>
     );
   }
 });
