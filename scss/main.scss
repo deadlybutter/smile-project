@@ -7,7 +7,7 @@ $middleblue: #90CED7;
 $spacing: 16px;
 $textSizeDefault: 24px;
 $textSizeLarge: 48px;
-$textSizeSuperLarge: 128px;
+$textSizeSuperLarge: 10vw;
 
 * {
   margin: 0;
@@ -68,7 +68,7 @@ a {
     transform: rotate(6deg);
 
     h1 {
-      font-size: 10vw;
+      font-size: $textSizeSuperLarge;
       transform: rotate(-6deg);
     }
   }
@@ -82,7 +82,7 @@ a {
   }
 
   .gallery {
-    padding: $spacing;
+    padding: 48px 0;
 
     img {
       display: inline;
