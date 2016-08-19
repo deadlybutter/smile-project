@@ -5,6 +5,7 @@ const BlogPost = React.createClass({
     const feedImage = $($blogData.children('p.medium-feed-image')[0]).find('img');
 
     if (feedImage.length == 0) {
+      console.log(blogData, $blogData, feedImage);
       return null;
     }
 
@@ -15,13 +16,13 @@ const BlogPost = React.createClass({
     };
 
     return (
-      <a href={blogData.link}>
-        <div className="blog__item" style={styles}>
+      <div className="blog__item" style={styles}>
+        <a href={blogData.link}>
           <div className="wrapper">
             <p>{blogData.title}</p>
           </div>
-        </div>
-      </a>
+        </a>
+      </div>
     );
   }
 });
@@ -43,10 +44,12 @@ const BlogContainer = React.createClass({
 
   render: function() {
     const items = this.state.items;
-    if (!items) {
-      return;
+    console.log(items);
+    if (items.length == 0) {
+      console.log(items, items.length);
+      return null;
     }
-
+    console.log("test");
     return (
       <div>
         {items.map(function(item, index) {

@@ -40,7 +40,7 @@ a {
   background-color: $isabelline;
 
   > .wrapper {
-    max-width: 1440px;
+    max-width: 1000px;
     margin: auto;
     background-color: inherit;
   }
@@ -57,7 +57,7 @@ a {
   }
 
   .introduction__photo {
-    width: 50%;
+    width: 54%;
     max-width: 550px;
     border: $spacing solid $isabelline;
     border-bottom-width: $spacing * 4;
@@ -75,6 +75,8 @@ a {
 }
 
 .social {
+  padding: $spacing * 2 0;
+
   > .wrapper {
     color: $stormcloud;
     text-align: center;
@@ -99,6 +101,7 @@ a {
 
 .blog {
    background-color: $middleblue;
+   text-align: center;
 
    > .wrapper {
      text-align: center;
@@ -111,24 +114,29 @@ a {
 
    .blog__item {
      display: inline-block;
-     width: 100%;
+     width: 49%;
      min-height: 256px;
      background-size: cover;
      background-position: 50%;
-     color: $isabelline;
      position: relative;
+     text-align: left;
 
      .wrapper {
        position: absolute;
        bottom: 0;
        width: 100%;
-       width: 100%;
      }
 
      p {
-       margin: $spacing;
-       text-shadow: 3px 3px 7px rgba(0, 0, 0, 1);
+       color: $isabelline;
+       margin: $spacing * 2;
+       text-shadow: 1px 3px 6px rgba(0, 0, 0, 1);
        font-size: $textSizeLarge;
+       font-weight: 900;
+
+       &:hover {
+         color: $darkerSunglow;
+       }
      }
    }
 }
