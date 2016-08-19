@@ -3,7 +3,7 @@ const app = express();
 app.use(express.static('public'));
 
 const feed = require("feed-read");
-let feedItems = [];
+var feedItems = [];
 const CronJob = require('cron').CronJob;
 
 app.get('/', function (req, res) {
@@ -31,7 +31,7 @@ app.listen(process.env.PORT, function () {
   console.info(`App listening on port ${process.env.PORT}.`);
   fetchOnboardData();
 
-  // new CronJob('*/30 * * * * *', function() {
-  //   fetchOnboardData();
-  // }, null, true, 'America/Los_Angeles');
+  new CronJob('*/30 * * * * *', function() {
+    fetchOnboardData();
+  }, null, true, 'America/Los_Angeles');
 });
